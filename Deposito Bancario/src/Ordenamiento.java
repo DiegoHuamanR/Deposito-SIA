@@ -89,7 +89,7 @@ public class Ordenamiento<E extends Comparable<E>> {//aqui se reliza los cambios
 			resp=table.get(dressHash).reg.getNombre();
 			respd=table.get(dressHash).reg.getApellido();
 			respe=table.get(dressHash).reg.getMonto();
-			System.out.println("Elemento encontrado, el usuario es: "+resp+" "+respd);	
+			System.out.println("Usuario encontrado, el usuario es: "+resp+" "+respd);	
 			return true;
 		}
 		else {
@@ -101,13 +101,14 @@ public class Ordenamiento<E extends Comparable<E>> {//aqui se reliza los cambios
 		E resp;
 		E respd;
 		int respe;
-		resp=table.get(dressHash).reg.getNombre();
-		respd=table.get(dressHash).reg.getApellido();
 		dressHash=linearProbing(dressHash, key,-1);
-		respe=table.get(dressHash).reg.getMonto();
-		respe=respe+deposito;
-		table.get(dressHash).reg.setMonto(respe);
 		if(dressHash!=-1) {
+			resp=table.get(dressHash).reg.getNombre();
+			respd=table.get(dressHash).reg.getApellido();
+			
+			respe=table.get(dressHash).reg.getMonto();
+			respe=respe+deposito;
+			table.get(dressHash).reg.setMonto(respe);
 			System.out.println("Se realizo con exito el deposito al usuario: "+resp+" "+respd);	
 		}
 		else {
@@ -117,7 +118,7 @@ public class Ordenamiento<E extends Comparable<E>> {//aqui se reliza los cambios
 
 	@Override
 	public String toString() {
-		String s="Posicion   Clave   Monto   Nombre/Apellido\n";
+		String s="Posicion   Cuenta   Monto   Nombre/Apellido\n";
 		int i=0;
 		for(Element item : table) {
 			s+=(i++)+" -->\t";

@@ -1,6 +1,6 @@
 74751254	Rosa	Rosales		235
 14468974	Diego	Huaman		152
-28874568	Daniel	Reynso		182
+28874568	Daniel	Reynoso		182
 42545121	Alberto	Puma		130
 56612145	Erick	Pinares		500
 63712025	Karlos	Osorio		123
